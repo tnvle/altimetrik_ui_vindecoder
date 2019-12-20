@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Details</h2>
+<div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="attr: ${vin.details}">
+            <td th:text="${attr.name}">ID</td>
+            <td th:text="${attr.value}">Name</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h2>Makes</h2>
+<div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>MakeID</th>
+            <th>MakeName</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="make: ${vin.makes}">
+            <td th:text="${make.id}">ID</td>
+            <td th:text="${make.name}">Name</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Models</h2>
+<div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Model ID</th>
+            <th>Model Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="model: ${vin.models}">
+            <td th:text="${model.id}">ID</td>
+            <td th:text="${model.name}">Name</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
